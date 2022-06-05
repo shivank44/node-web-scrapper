@@ -1,0 +1,18 @@
+<%- include('./partials/header'); -%>
+
+    <main>
+        <div class="d-flex justify-content-between py-4 my-4"></div>
+        <div class="ui segment">
+            <form action="/crawl">
+                <div class="mb-3">
+                  <label for="domain" class="form-label">Enter Domain</label>
+                  <input name="domain" type="text" class="form-control" id="domain" aria-describedby="domainHelp">
+                  <div id="domainHelp" class="form-text">Please enter your domain</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </main>
+
+<%- include('./partials/footer'); %>
+

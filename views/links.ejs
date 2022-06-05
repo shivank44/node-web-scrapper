@@ -1,0 +1,33 @@
+<%- include('./partials/header'); -%>
+
+    <main>
+        <div class="d-flex justify-content-between py-4 my-4"></div>
+        <div class="ui segment table-responsive">
+            <table class="table" id="example">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Links</th>
+                    <th scope="col">Total Words</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% let i=1; let total_words=0; for(let domain of domains){ %>    
+                  <tr>
+                    <th scope="row"><%= i %></th>
+                    <td><%= domain.link %></td>
+                    <td><%= domain.word_count %></td>
+                  </tr>
+                <% i++; total_words+=domain.word_count; } %>  
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">Total</th>
+                        <th><%= total_words %></th>
+                    </tr>
+                </tfoot>
+              </table>
+        </div>
+    </main>
+<%- include('./partials/footer'); %>
+
